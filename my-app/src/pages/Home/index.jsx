@@ -4,6 +4,8 @@ import { Button, Space } from 'antd'
 import ReasonSection from './components/ReasonSection'
 import excuteAOS from '@/utils/AOS'
 import { useCallback, useEffect } from 'react'
+import DesignSection from './components/DesignSection'
+import ClientSection from './components/ClientSection'
 
 const Home = () => {
   const callBackAos = useCallback(() => {
@@ -16,7 +18,7 @@ const Home = () => {
   return (
     <div>
       <Introduce
-        className='lg:h-screen h-auto bg-white relative z-30'
+        className='h-auto bg-white relative z-30 xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12'
         tag='The best tech company in the year'
         title='Welcome to Virtu company'
         shortContent='The best tech company'
@@ -35,8 +37,10 @@ const Home = () => {
         </Space>
       </Introduce>
       <ReasonSection />
+      <DesignSection className='h-auto bg-white relative z-30 xl:pt-28 lg:pt-24 md:pt-20 sm:pt-16 pt-12 xl:pb-56 lg:pb-48 md:pb-40 sm:pb-32 pb-24 '/>
+      <ClientSection/>
     </div>
-  )
+  ) 
 }
 
 export default Home

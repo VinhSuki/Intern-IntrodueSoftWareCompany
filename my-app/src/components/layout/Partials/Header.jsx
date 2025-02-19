@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
+import BackgroundOverlay from '@/components/common/BackgroundOverlay'
 import { IMAGES } from '@/constant'
 import { CloseOutlined, DownOutlined, MenuOutlined, UpOutlined } from '@ant-design/icons'
-import { Dropdown, Flex, Space } from 'antd'
+import { Flex, Popover, Space } from 'antd'
+import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import BackgroundOverlay from '@/components/common/BackgroundOverlay'
 
 const Header = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true) // State để theo dõi header
@@ -13,54 +13,36 @@ const Header = () => {
   const serviceItems = [
     {
       key: '1',
-      label: (
-        <NavLink to={'/service'} className='sm:text-base text-sm hover:text-hover'>
-          Service
-        </NavLink>
-      )
+      name: 'Service',
+      url: '/service'
     },
     {
       key: '2',
-      label: (
-        <NavLink to={'/service-detail'} className='sm:text-base text-sm hover:text-hover'>
-          Service Detail
-        </NavLink>
-      )
+      name: 'Service Detail',
+      url: '/service-detail'
     }
   ]
 
   const pageItems = [
     {
       key: '1',
-      label: (
-        <NavLink to={'/faq'} className='xl:text-base lg:text-sm md:text-xs uppercase'>
-          faq
-        </NavLink>
-      )
+      name: 'FAQ',
+      url: '/faq'
     },
     {
       key: '2',
-      label: (
-        <NavLink to={'/404'} className='xl:text-base lg:text-sm md:text-xs uppercase'>
-          404
-        </NavLink>
-      )
+      name: '404',
+      url: '/404'
     },
     {
       key: '3',
-      label: (
-        <NavLink to={'/career'} className='xl:text-base lg:text-sm md:text-xs uppercase'>
-          career
-        </NavLink>
-      )
+      name: 'Career',
+      url: '/career'
     },
     {
       key: '4',
-      label: (
-        <NavLink to={'/career-detail'} className='xl:text-base lg:text-sm md:text-xs uppercase'>
-          career-detail
-        </NavLink>
-      )
+      name: 'Career Detail',
+      url: '/career-detail'
     }
   ]
 
@@ -116,29 +98,53 @@ const Header = () => {
           About Us
         </NavLink>
         {/* Service */}
-        <Dropdown
-          menu={{ items: serviceItems }}
-          className='group xl:text-base lg:text-sm md:text-xs uppercase xl:px-4 lg:px-3.5 md:px-3 h-full flex items-center justify-center hover:text-hover ease-linear transition-all font-medium'
+        <Popover
+          color='#1c2145'
+          trigger='hover' // Kích hoạt khi hover vào
+          placement='bottomRight'
+          content={
+            <div className='bg-transparent'>
+              {serviceItems.map((service) => (
+                <NavLink
+                  key={service.key}
+                  to={service.url}
+                  className='rounded-md shadow-md px-4 py-2 xl:text-sm lg:text-xs md:text-2xs hover:text-hover text-white block uppercase'
+                >
+                  {service.name}
+                </NavLink>
+              ))}
+            </div>
+          }
         >
-          <a onClick={(e) => e.preventDefault()}>
-            <Space>
-              Service
-              <UpOutlined className='transform transition group-hover:rotate-180' />
-            </Space>
-          </a>
-        </Dropdown>
+          <Space className='relative group xl:text-base lg:text-sm md:text-xs uppercase xl:px-4 lg:px-3.5 md:px-3 h-full flex items-center justify-center   ease-linear transition-all font-medium'>
+            <span className='group-[.ant-popover-open]:text-hover group-hover:text-hover'>Service</span>
+            <UpOutlined className='transform transition duration-300 group-[.ant-popover-open]:text-hover group-hover:rotate-180 group-[.ant-popover-open]:rotate-180' />
+          </Space>
+        </Popover>
         {/* Page */}
-        <Dropdown
-          menu={{ items: pageItems }}
-          className='group xl:text-base lg:text-sm md:text-xs uppercase xl:px-4 lg:px-3.5 md:px-3 h-full flex items-center justify-center hover:text-hover ease-linear transition-all font-medium'
+        <Popover
+          color='#1c2145'
+          trigger='hover' // Kích hoạt khi hover vào
+          placement='bottomRight'
+          content={
+            <div className='bg-transparent'>
+              {pageItems.map((page) => (
+                <NavLink
+                  key={page.key}
+                  to={page.url}
+                  className='rounded-md shadow-md px-4 py-2 xl:text-sm lg:text-xs md:text-2xs hover:text-hover text-white block uppercase'
+                >
+                  {page.name}
+                </NavLink>
+              ))}
+            </div>
+          }
         >
-          <a onClick={(e) => e.preventDefault()}>
-            <Space>
-              Page
-              <UpOutlined className='transform transition group-hover:rotate-180' />
-            </Space>
-          </a>
-        </Dropdown>
+          <Space className='relative group xl:text-base lg:text-sm md:text-xs uppercase xl:px-4 lg:px-3.5 md:px-3 h-full flex items-center justify-center   ease-linear transition-all font-medium'>
+            <span className='group-[.ant-popover-open]:text-hover group-hover:text-hover'>Page</span>
+            <UpOutlined className='transform transition duration-300 group-[.ant-popover-open]:text-hover group-hover:rotate-180 group-[.ant-popover-open]:rotate-180' />
+          </Space>
+        </Popover>
         <NavLink
           to={'/contact'}
           className={({ isActive }) =>
@@ -159,6 +165,7 @@ const Header = () => {
             className='font-blinker absolute left-0 top-0 sm:w-1/2 w-2/3 bg-secondary sm:p-6 p-4 h-screen z-50 shadow-md border-r border-overlay overflow-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-blue-primary scrollbar-track-gray-100'
             data-aos='fade-right'
             data-aos-duration='500'
+            data-aos-anchor-placement='top-bottom'
           >
             <Flex justify='space-between' align='center' className='w-full'>
               <Link to={'/'} className='w-1/2'>
@@ -198,11 +205,15 @@ const Header = () => {
                 </label>
 
                 {/* Dropdown menu chính */}
-                <div className='text-white transition-all ease-in-out overflow-hidden max-h-0 peer-checked:max-h-[600px] peer-checked:opacity-100 opacity-0 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-primary scrollbar-track-gray-100 space-y-2'>
+                <div className='text-white transition-all ease-in-out overflow-hidden max-h-0 peer-checked:max-h-[600px] peer-checked:opacity-100 opacity-0 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-primary scrollbar-track-gray-100'>
                   {serviceItems.map((service) => (
-                    <div key={service.key} className='sm:pl-4 pl-2'>
-                      {service.label}
-                    </div>
+                    <Link
+                      to={service.url}
+                      key={service.key}
+                      className='block sm:pl-4 pl-2 sm:text-base text-sm sm:py-1.5 py-1 text-white hover:text-hover'
+                    >
+                      {service.name}
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -222,9 +233,13 @@ const Header = () => {
                 {/* Dropdown menu chính */}
                 <div className='text-white transition-all ease-in-out overflow-hidden max-h-0 peer-checked:max-h-[600px] peer-checked:opacity-100 opacity-0 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-primary scrollbar-track-gray-100 space-y-2'>
                   {pageItems.map((page) => (
-                    <div key={page.key} className='sm:pl-4 pl-2'>
-                      {page.label}
-                    </div>
+                    <Link
+                      to={page.url}
+                      key={page.key}
+                      className='block sm:pl-4 pl-2 sm:text-base text-sm sm:py-1.5 py-1 text-white hover:text-hover'
+                    >
+                      {page.name}
+                    </Link>
                   ))}
                 </div>
               </div>

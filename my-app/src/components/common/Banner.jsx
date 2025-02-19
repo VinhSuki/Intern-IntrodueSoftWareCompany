@@ -3,7 +3,7 @@ import { Button, Input } from 'antd'
 
 const Banner = () => {
   return (
-    <div className='relative z-20 bg-secondary h-screen'>
+    <div className='relative z-20 bg-secondary md:h-screen h-svh'>
       <div className='absolute inset-0'>
         <img
           src={IMAGES.MAIN_OVERLAY.url}
