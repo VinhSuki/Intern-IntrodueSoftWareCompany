@@ -29,27 +29,27 @@ const ReasonSection = () => {
             scelerisque lacus fermentum in.
           </p>
           <div className='w-full grid grid-cols-2 gap-4'>
-            <div className='space-x-3 xl:text-lg lg:text-base md:text-lg sm:text-base text-xs'>
+            <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
               <CheckCircleFilled className='text-third hover:text-white' />
               <span className='text-white'>Customer Funnel Booster</span>
             </div>
-            <div className='space-x-3 xl:text-lg lg:text-base md:text-lg sm:text-base text-xs'>
+            <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
               <CheckCircleFilled className='text-third hover:text-white' />
               <span className='text-white'>Vulputate massa</span>
             </div>
-            <div className='space-x-3 xl:text-lg lg:text-base md:text-lg sm:text-base text-xs'>
+            <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
               <CheckCircleFilled className='text-third hover:text-white' />
               <span className='text-white'>Remarketing Blueprint</span>
             </div>
-            <div className='space-x-3 xl:text-lg lg:text-base md:text-lg sm:text-base text-xs'>
+            <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
               <CheckCircleFilled className='text-third hover:text-white' />
               <span className='text-white'>Phasellus odio dolor</span>
             </div>
-            <div className='space-x-3 xl:text-lg lg:text-base md:text-lg sm:text-base text-xs'>
+            <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
               <CheckCircleFilled className='text-third hover:text-white' />
               <span className='text-white'>Lead Nurturing Scheme</span>
             </div>
-            <div className='space-x-3 xl:text-lg lg:text-base md:text-lg sm:text-base text-xs'>
+            <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
               <CheckCircleFilled className='text-third hover:text-white' />
               <span className='text-white'>Aliquam sed finibus</span>
             </div>

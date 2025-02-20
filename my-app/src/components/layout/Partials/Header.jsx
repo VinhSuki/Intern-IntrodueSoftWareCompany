@@ -73,7 +73,7 @@ const Header = () => {
       }`}
     >
       <Link to={'/'} className='h-full'>
-        <img src={IMAGES.MAIN_LOGO.url} alt={IMAGES.MAIN_LOGO.name} className='h-full object-cover' />
+        <img src={IMAGES.MAIN_LOGO.url} alt={IMAGES.MAIN_LOGO.name} className='h-full object-cover' loading="lazy"/>
       </Link>
       {/* Menu MD > */}
       <div className='items-center md:flex hidden font-blinker'>
@@ -169,7 +169,7 @@ const Header = () => {
           >
             <Flex justify='space-between' align='center' className='w-full'>
               <Link to={'/'} className='w-1/2'>
-                <img src={IMAGES.MAIN_LOGO.url} alt={IMAGES.MAIN_LOGO.name} className='w-full object-cover ' />
+                <img src={IMAGES.MAIN_LOGO.url} alt={IMAGES.MAIN_LOGO.name} className='w-full object-cover' loading="lazy" />
               </Link>
               <button
                 className='text-end px-2 py-1 sm:px-3 sm:py-1.5 bg-primary rounded-md hover:bg-hover ease-linear transition-all group'

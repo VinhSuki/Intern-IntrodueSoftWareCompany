@@ -1,19 +1,10 @@
-import { lazy, Suspense } from 'react'
+import Banner from '@/components/common/Banner'
+import BannerBreadCrumb from '@/components/common/BannerBreadCrumb'
+import Home from '@/pages/Home'
 import { useRoutes } from 'react-router-dom'
 import PageTitle from '../components/common/PageTitle'
 import DefaultLayout from '../components/layout/DefaultLayout'
-import Home from '@/pages/Home'
-import Banner from '@/components/common/Banner'
-
-// eslint-disable-next-line react/display-name
-const Loadable = (Component) => (props) =>
-  (
-    <Suspense fallback={<div>Loading</div>}>
-      <Component {...props} />
-    </Suspense>
-  )
-
-// const Profile = Loadable(lazy(() => import('@/pages/Profile/Profile')))
+import AboutUs from '@/pages/About-Us'
 
 const AppRouter = () => {
   return useRoutes([
@@ -26,9 +17,19 @@ const AppRouter = () => {
           path: '',
           element: (
             <>
-              <PageTitle title='Trang chủ' />
+              <PageTitle title='Home' />
               <Banner/>
               <Home />
+            </>
+          )
+        },
+        {
+          path: '/about-us',
+          element: (
+            <>
+              <PageTitle title='About Us' />
+              <BannerBreadCrumb title='About Us'/>
+              <AboutUs />
             </>
           )
         },

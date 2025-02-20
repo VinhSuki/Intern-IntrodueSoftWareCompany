@@ -10,9 +10,10 @@ const DesignSection = ({ className = '' }) => {
         <div className='h-full grid grid-cols-1 lg:grid-cols-2 xl:space-x-6 lg:space-x-5 space-x-0 lg:space-y-0 md:space-y-5 space-y-4'>
           <div className='relative'>
             <img
-              src={IMAGES.DESIGN_LAPTOP.url}
-              alt={IMAGES.DESIGN_LAPTOP.name}
+              src={IMAGES.DESIGN.url}
+              alt={IMAGES.DESIGN.name}
               className='object-cover w-auto h-auto'
+              loading="lazy"
             />
             <Tag
               className='text-center uppercase font-bold right-0 xl:text-2xl lg:text-xl md:text-2xl sm:text-xl text-lg z-50 absolute top-0 xl:p-2 lg:p-1.5 md:p-1 sm:p-1.5 p-1 font-blinker'

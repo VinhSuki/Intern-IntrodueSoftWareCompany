@@ -3,9 +3,9 @@ import { Button, Carousel } from 'antd'
 
 const ClientSection = () => {
   return (
-    <div className='xl:h-[300px] lg:h-[250px] h-full bg-transparent xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4 relative z-30'>
+    <div className='xl:h-[300px] lg:h-[250px] h-full bg-transparent lg:py-0 md:py-12 sm:py-8 py-4 xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4 relative z-30'>
       <div className='relative w-full'>
-        <div className='left-0 right-0 absolute xl:-top-28 lg:-top-24 md:-top-20 sm:-top-16 -top-12  grid lg:grid-cols-5 grid-cols-1 xl:h-[300px] lg:h-[250px] h-full xl:gap-4 lg:gap-3 gap-0'>
+        <div className='left-0 right-0 lg:absolute static xl:-top-28 lg:-top-24 top-0 grid lg:grid-cols-5 grid-cols-1 xl:h-[300px] lg:h-[250px] h-full xl:gap-4 lg:gap-3 gap-0'>
           <div className='lg:col-span-2 col-span-1 lg:space-y-0 md:space-y-6 sm:space-y-5 space-y-4 flex flex-col justify-between xl:p-8 lg:p-6 md:p-8 sm:p-6 p-4 bg-secondary rounded-md'>
             <h4 className='text-third font-semibold xl:text-xl lg:text-lg md:text-xl sm:text-lg text-base'>
               Our Client
@@ -21,7 +21,7 @@ const ClientSection = () => {
             <Carousel dots={false} autoplay infinite slidesToShow={5} slidesToScroll={1} className=''>
               {IMAGES.CAROUSEL_LOGO.map((image, i) => (
                 <div key={i} className='xl:px-4 lg:px-3 md:px-4 sm:px-3 px-2'>
-                  <img src={image.url} alt={`Image ${image.id}`} className='w-full h-auto object-contain' />
+                  <img src={image.url} alt={`Image ${image.id}`} className='w-full h-auto object-contain' loading="lazy"/>
                 </div>
               ))}
             </Carousel>
