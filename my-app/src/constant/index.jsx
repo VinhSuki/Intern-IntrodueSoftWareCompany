@@ -20,7 +20,9 @@ import OutstandingClient from '@/assets/images/client/outstanding.jpg'
 import GetInTouch from '@/assets/images/get_in_touch.jpg'
 import History1 from '@/assets/images/history/1.jpg'
 import History2 from '@/assets/images/history/2.jpg'
-
+import Project1 from '@/assets/images/project/1.jpg'
+import Project2 from '@/assets/images/project/2.jpg'
+import Project3 from '@/assets/images/project/3.jpg'
 
 export const IMAGES = {
   MAIN_LOGO: {
@@ -85,6 +87,20 @@ export const IMAGES = {
       url: CarouselLogo6
     }
   ],
+  CAROUSEL_PROJECT: [
+    {
+      name: 'Carousel Project 1',
+      url: Project1
+    },
+    {
+      name: 'Carousel Project 2',
+      url: Project2
+    },
+    {
+      name: 'Carousel Project 3',
+      url: Project3
+    }
+  ],
   CAROUSEL_CLIENT: [
     {
       name: 'Carousel Client 1',
@@ -93,7 +109,7 @@ export const IMAGES = {
       fullName: 'Dyas Kardinal',
       content:
         '"Nullam congue pretium nisl. Curabitur at sem et leo dictum pretium. Morbi in rutrum tellus. Donec interdum ut felis et rutrum. Proin vitae venenatis sem"'
-   },
+    },
     {
       name: 'Carousel Client 2',
       url: CarouselClient2,
@@ -101,14 +117,15 @@ export const IMAGES = {
       fullName: 'Smasi Khan',
       content:
         '"Nullam congue pretium nisl. Curabitur at sem et leo dictum pretium. Morbi in rutrum tellus. Donec interdum ut felis et rutrum. Proin vitae venenatis sem"'
-   },
+    },
     {
       name: 'Carousel Client 3',
       url: CarouselClient3,
       job: 'Developer',
       fullName: 'Elsa Verina',
       content:
-        '"Nullam congue pretium nisl. Curabitur at sem et leo dictum pretium. Morbi in rutrum tellus. Donec interdum ut felis et rutrum. Proin vitae venenatis sem"'    }
+        '"Nullam congue pretium nisl. Curabitur at sem et leo dictum pretium. Morbi in rutrum tellus. Donec interdum ut felis et rutrum. Proin vitae venenatis sem"'
+    }
   ],
   OUTSTANDING_CLIENT: {
     name: 'Outstanding Client',
@@ -125,5 +142,5 @@ export const IMAGES = {
   HISTORY_2: {
     name: 'History 2',
     url: History2
-  },
+  }
 }

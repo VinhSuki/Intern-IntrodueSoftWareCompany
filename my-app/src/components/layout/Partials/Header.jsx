@@ -72,7 +72,8 @@ const Header = () => {
         isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <Link to={'/'} className='h-full'>
+      <Link
+        onClick={()=>setIsShowMenu(false)} to={'/'} className='h-full'>
         <img src={IMAGES.MAIN_LOGO.url} alt={IMAGES.MAIN_LOGO.name} className='h-full object-cover' loading="lazy"/>
       </Link>
       {/* Menu MD > */}
@@ -168,7 +169,8 @@ const Header = () => {
             data-aos-anchor-placement='top-bottom'
           >
             <Flex justify='space-between' align='center' className='w-full'>
-              <Link to={'/'} className='w-1/2'>
+              <Link
+                onClick={()=>setIsShowMenu(false)} to={'/'} className='w-1/2'>
                 <img src={IMAGES.MAIN_LOGO.url} alt={IMAGES.MAIN_LOGO.name} className='w-full object-cover' loading="lazy" />
               </Link>
               <button
@@ -180,12 +182,14 @@ const Header = () => {
             </Flex>
             <div className='text-white mt-4'>
               <Link
+                onClick={()=>setIsShowMenu(false)}
                 className='w-full inline-block py-2 hover:text-hover transition-all ease-linear md:text-base sm:text-lg text-base'
                 to={'/'}
               >
                 Home
               </Link>
               <Link
+                onClick={()=>setIsShowMenu(false)}
                 className='w-full inline-block py-2 hover:text-hover transition-all ease-linear md:text-base sm:text-lg text-base'
                 to={'/about-us'}
               >
@@ -208,6 +212,7 @@ const Header = () => {
                 <div className='text-white transition-all ease-in-out overflow-hidden max-h-0 peer-checked:max-h-[600px] peer-checked:opacity-100 opacity-0 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-primary scrollbar-track-gray-100'>
                   {serviceItems.map((service) => (
                     <Link
+                      onClick={()=>setIsShowMenu(false)}
                       to={service.url}
                       key={service.key}
                       className='block sm:pl-4 pl-2 sm:text-base text-sm sm:py-1.5 py-1 text-white hover:text-hover'
@@ -234,6 +239,7 @@ const Header = () => {
                 <div className='text-white transition-all ease-in-out overflow-hidden max-h-0 peer-checked:max-h-[600px] peer-checked:opacity-100 opacity-0 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-primary scrollbar-track-gray-100 space-y-2'>
                   {pageItems.map((page) => (
                     <Link
+                      onClick={()=>setIsShowMenu(false)}
                       to={page.url}
                       key={page.key}
                       className='block sm:pl-4 pl-2 sm:text-base text-sm sm:py-1.5 py-1 text-white hover:text-hover'
@@ -244,6 +250,7 @@ const Header = () => {
                 </div>
               </div>
               <Link
+                onClick={()=>setIsShowMenu(false)}
                 className='w-full inline-block py-2 hover:text-hover transition-all ease-linear md:text-base sm:text-lg text-base'
                 to={'/contact'}
               >

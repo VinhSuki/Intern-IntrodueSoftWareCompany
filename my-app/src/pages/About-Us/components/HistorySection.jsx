@@ -13,7 +13,7 @@ const HistorySection = () => {
           <h4 className='text-third font-bold xl:text-xl lg:text-lg md:text-xl sm:text-lg text-base font-blinker'>
             Why we do this ?
           </h4>
-          <h1 className='text-white font-bold xl:text-7xl lg:text-6xl md:text-7xl sm:text-6xl text-5xl font-blinker'>
+          <h1 className='text-white font-bold xl:text-6xl lg:text-5xl md:text-6xl sm:text-5xl text-4xl font-blinker'>
             History
           </h1>
           <p className='text-white xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
@@ -29,18 +29,18 @@ const HistorySection = () => {
           </div>
         </div>
         <div className='w-full'>
-          <div className='lg:relative relative xl:h-[180%] xl:-top-[40%] lg:h-[150%] lg:-top-[25%]'>
+          <div className='lg:relative static xl:h-[180%] xl:-top-[40%] lg:h-[170%] lg:-top-[35%] h-full'>
             <img
               src={IMAGES.HISTORY_1.url}
               alt={IMAGES.HISTORY_1.name}
               loading='lazy'
-              className='lg:absolute static w-[95%] right-0 top-0 object-cover rounded-md'
+              className='lg:absolute static lg:w-[95%] lg:h-3/5 w-full right-0 top-0 object-cover rounded-md'
             />
             <img
               src={IMAGES.HISTORY_2.url}
               alt={IMAGES.HISTORY_2.name}
               loading='lazy'
-              className='lg:absolute static w-[95%] left-0 bottom-0 object-cover rounded-md z-10'
+              className='lg:absolute static lg:w-[95%] lg:h-3/5 w-full  left-0 bottom-0 object-cover rounded-md z-10'
             />
           </div>
         </div>

@@ -17,6 +17,12 @@ export default {
         roboto: ['Roboto', 'sans-serif'], // Thêm Roboto
         blinker: ['Blinker', 'sans-serif'], // Thêm Blinker
       },
+      padding: {
+        '50%': '50%',
+      },
+      backgroundImage: {
+        'background-container': "url('src/assets/images/get_in_touch.jpg')",
+      },
       colors:{
         'primary': '#497DFF',
         'secondary': '#040E56',

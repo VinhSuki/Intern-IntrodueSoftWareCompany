@@ -12,14 +12,14 @@ const Introduce = ({ className = '', title = '', shortContent = '', description 
             <img
               src={IMAGES.INTRODUCE_1.url}
               alt={IMAGES.INTRODUCE_1.name}
-              className='md:h-2/3 h-full  object-cover bg-center absolute right-0 top-0 z-10 rounded-md'
+              className='lg:h-3/5 md:h-2/3 h-full  object-cover bg-center absolute right-0 top-0 z-10 rounded-md'
             />
 
             {/* Ảnh 2 (chồng lên nhưng không thay đổi chiều cao tổng thể) */}
             <img
               src={IMAGES.INTRODUCE_2.url}
               alt={IMAGES.INTRODUCE_2.name}
-              className='absolute md:h-2/3 h-full object-cover bottom-0  z-10 rounded-md'
+              className='absolute lg:h-3/5 md:h-2/3 h-full object-cover bottom-0  z-10 rounded-md'
             />
 
             {/* Thẻ Tag */}

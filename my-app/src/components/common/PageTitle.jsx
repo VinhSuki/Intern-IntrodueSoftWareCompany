@@ -7,7 +7,9 @@ const PageTitle = ({ title }) => {
 
   useEffect(() => {
     document.title = title;
+    window.scrollTo(0, 0);
   }, [location, title]);
+
 
   return null; // This component doesn't render anything
 };
