@@ -7,8 +7,21 @@ const Faq = () => {
   const [activeFunction, setActiveFunction] = useState('4')
   const [activeRedesign, setActiveRedesign] = useState('7')
 
-  const handleToggle = (name, setActive) => {
-    setActive((prev) => (prev === name ? null : name)) // Đóng nếu click lại
+  const handleToggle = (name, active, setActive) => {
+    if (active === name) {
+      // Nếu đã mở, click lại để đóng ngay
+      setActive(null)
+    } else {
+      // Nếu đang có dropdown khác mở, đóng nó trước
+      if (active !== null) {
+        setActive(null)
+        setTimeout(() => {
+          setActive(name)
+        }, 200) 
+      } else {
+        setActive(name)
+      }
+    }
   }
   return (
     <div className='bg-white relative z-30 xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12 xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4'>
@@ -29,24 +42,24 @@ const Faq = () => {
           </h4>
           <DropdownInfo
             isActive={activeVirtu === '1'}
-            onToggle={() => handleToggle('1', setActiveVirtu)}
+            onToggle={() => handleToggle('1', activeVirtu, setActiveVirtu)}
             name='1'
             title='How to Change my Photo from Admin Dashboard?'
-            content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
+            content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.'
           />
           <DropdownInfo
             isActive={activeVirtu === '2'}
-            onToggle={() => handleToggle('2', setActiveVirtu)}
+            onToggle={() => handleToggle('2', activeVirtu, setActiveVirtu)}
             name='2'
             title='How to Change my Password easily?'
-            content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
+            content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.'
           />
           <DropdownInfo
             isActive={activeVirtu === '3'}
-            onToggle={() => handleToggle('3', setActiveVirtu)}
+            onToggle={() => handleToggle('3', activeVirtu, setActiveVirtu)}
             name='3'
-            title='How to Change my Subscription Plan using PayPal'
-            content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
+            title='How to Change my Subscription Plan using PayPal?'
+            content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.'
           />
         </div>
         <div className='h-full flex flex-col lg:gap-y-4 sm:gap-y-3 gap-y-2'>
@@ -55,21 +68,21 @@ const Faq = () => {
           </h4>
           <DropdownInfo
             isActive={activeFunction === '4'}
-            onToggle={() => handleToggle('4', setActiveFunction)}
+            onToggle={() => handleToggle('4', activeFunction, setActiveFunction)}
             name='4'
             title='How to Change my Photo from Admin Dashboard?'
             content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
           />
           <DropdownInfo
             isActive={activeFunction === '5'}
-            onToggle={() => handleToggle('5', setActiveFunction)}
+            onToggle={() => handleToggle('5', activeFunction, setActiveFunction)}
             name='5'
             title='How to Change my Password easily?'
             content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
           />
           <DropdownInfo
             isActive={activeFunction === '6'}
-            onToggle={() => handleToggle('6', setActiveFunction)}
+            onToggle={() => handleToggle('6', activeFunction, setActiveFunction)}
             name='6'
             title='How to Change my Subscription Plan using PayPal'
             content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
@@ -81,21 +94,21 @@ const Faq = () => {
           </h4>
           <DropdownInfo
             isActive={activeRedesign === '7'}
-            onToggle={() => handleToggle('7', setActiveRedesign)}
+            onToggle={() => handleToggle('7', activeRedesign, setActiveRedesign)}
             name='7'
             title='How to Change my Photo from Admin Dashboard?'
             content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
           />
           <DropdownInfo
             isActive={activeRedesign === '8'}
-            onToggle={() => handleToggle('8', setActiveRedesign)}
+            onToggle={() => handleToggle('8', activeRedesign, setActiveRedesign)}
             name='8'
             title='How to Change my Password easily?'
             content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'
           />
           <DropdownInfo
             isActive={activeRedesign === '9'}
-            onToggle={() => handleToggle('9', setActiveRedesign)}
+            onToggle={() => handleToggle('9', activeRedesign, setActiveRedesign)}
             name='9'
             title='How to Change my Subscription Plan using PayPal'
             content='Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast'

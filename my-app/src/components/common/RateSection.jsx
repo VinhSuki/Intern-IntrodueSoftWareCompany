@@ -43,7 +43,7 @@ const RateSection = () => {
           </p>
         </div>
         <div className='w-full'>
-          <div className='lg:relative relative xl:h-[160%] xl:-top-[30%] lg:h-[150%] lg:-top-[25%]'>
+          <div className='relative xl:h-[160%] xl:-top-[30%] lg:h-[150%] lg:-top-[25%]'>
             <img
               src={IMAGES.OUTSTANDING_CLIENT.url}
               alt={IMAGES.OUTSTANDING_CLIENT.name}

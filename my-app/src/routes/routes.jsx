@@ -107,6 +107,15 @@ const AppRouter = () => {
               <CareerDetail />
             </>
           )
+        },
+        {
+          path: '*',
+          element: (
+            <>
+              <PageTitle title='404' />
+              <Banner type='404' />
+            </>
+          )
         }
       ]
     }
