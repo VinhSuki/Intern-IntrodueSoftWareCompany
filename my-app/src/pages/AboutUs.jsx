@@ -1,7 +1,7 @@
 import Introduce from '@/components/common/Introduce'
 import { DropboxOutlined } from '@ant-design/icons'
 import { Button } from 'antd'
-import HistorySection from './components/HistorySection'
+import HistorySection from '@/components/common/HistorySection'
 import DesignSection from '@/components/common/DesignSection'
 import ClientSection from '@/components/common/ClientSection'
 import BackgroundContainer from '@/components/common/BackgroundContainer'

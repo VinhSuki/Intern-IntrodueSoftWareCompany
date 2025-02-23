@@ -23,6 +23,7 @@ import History2 from '@/assets/images/history/2.jpg'
 import Project1 from '@/assets/images/project/1.jpg'
 import Project2 from '@/assets/images/project/2.jpg'
 import Project3 from '@/assets/images/project/3.jpg'
+import Faq from '@/assets/images/faq.png'
 
 export const IMAGES = {
   MAIN_LOGO: {
@@ -142,5 +143,28 @@ export const IMAGES = {
   HISTORY_2: {
     name: 'History 2',
     url: History2
+  },
+  FAQ: {
+    name: 'Faq',
+    url: Faq
   }
+}
+
+export const DATA = {
+  job: [
+    'Build scalable and robust APIs and system',
+    'Build reusable code and libraries for future use',
+    'Optimize code and application for maximum speed and scalability',
+    'Ensure stability and performance of the system',
+    'Implement security and data protection',
+    'Identify and fix bottlenecks and bugs on our system'
+  ],
+  requirement: [
+    'Have a Bachelor Degree in Computer Science, Information Technology or related subject',
+    'Have a minimum 2 years of experience / Fresh graduates may apply',
+    'Proficiency in HTML5, CSS, Javascript, jQuery, PHP',
+    'Proficiency in PHP Laravel, Bootstrap',
+    'Proficiency in REST API'
+  ],
+  offer: ['$2500 Salary/month', 'Computer', '$300 Transportation fee', 'Traveling at end of the year']
 }

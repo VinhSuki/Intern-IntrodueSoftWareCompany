@@ -1,6 +1,6 @@
 import Banner from '@/components/common/Banner'
 import BannerBreadCrumb from '@/components/common/BannerBreadCrumb'
-import AboutUs from '@/pages/About-Us'
+import AboutUs from '@/pages/AboutUs'
 import Contact from '@/pages/Contact'
 import Home from '@/pages/Home'
 import Service from '@/pages/Service'
@@ -8,6 +8,9 @@ import ServiceDetail from '@/pages/ServiceDetail'
 import { useRoutes } from 'react-router-dom'
 import PageTitle from '../components/common/PageTitle'
 import DefaultLayout from '../components/layout/DefaultLayout'
+import Faq from '@/pages/Faq'
+import Career from '@/pages/Career'
+import CareerDetail from '@/pages/CareerDetail'
 
 const AppRouter = () => {
   return useRoutes([
@@ -63,6 +66,45 @@ const AppRouter = () => {
               <PageTitle title='Contact' />
               <BannerBreadCrumb title='Contact' />
               <Contact />
+            </>
+          )
+        },
+        {
+          path: '/faq',
+          element: (
+            <>
+              <PageTitle title='FAQ' />
+              <BannerBreadCrumb title='FAQ' />
+              <Faq />
+            </>
+          )
+        },
+        {
+          path: '/404',
+          element: (
+            <>
+              <PageTitle title='404' />
+              <Banner type='404'></Banner>
+            </>
+          )
+        },
+        {
+          path: '/career',
+          element: (
+            <>
+              <PageTitle title='Career' />
+              <BannerBreadCrumb title='We are hiring' page={'Career'} />
+              <Career />
+            </>
+          )
+        },
+        {
+          path: '/career-detail',
+          element: (
+            <>
+              <PageTitle title='Career Detail' />
+              <BannerBreadCrumb title='Career Detail' />
+              <CareerDetail />
             </>
           )
         }

@@ -1,5 +1,5 @@
 import ClientSection from '@/components/common/ClientSection'
-import BusinessSection from './components/BusinessSection'
+import BusinessSection from '@/components/common/BusinessSection'
 import BackgroundContainer from '@/components/common/BackgroundContainer'
 import GetInTouchForm from '@/components/common/GetInTouchForm'
 

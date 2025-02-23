@@ -68,7 +68,7 @@ const Header = () => {
 
   return (
     <div
-      className={`xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4 flex items-center justify-between text-white xl:h-[100px] lg:h-[90px] md:h-[80px] sm:h-[70px] h-[60px] md:py-2 py-1 fixed top-0 inset-x-0 z-50 transition-transform bg-secondary ${
+      className={`xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4 flex items-center justify-between text-white xl:h-[100px] lg:h-[90px] md:h-[80px] sm:h-[70px] h-[60px] md:py-2 py-1 fixed top-0 inset-x-0 z-40 transition-transform bg-secondary ${
         isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >

@@ -4,7 +4,7 @@ import { Button } from 'antd'
 const GetInTouch = () => {
   return (
     <BackgroundContainer className='lg:py-0 md:py-20 sm:py-16 py-12'>
-      <div className='flex flex-col items-center justify-center h-full font-blinker relative'>
+      <div className='flex flex-col items-center justify-center h-full font-blinker relative' data-aos='zoom-in'>
         <h4 className='text-primary font-semibold xl:text-2xl lg:text-xl md:text-2xl sm:text-xl text-lg lg:mb-4 sm:mb-3 mb-2'>
           Like what you’ve seen? Get in touch to learn more
         </h4>

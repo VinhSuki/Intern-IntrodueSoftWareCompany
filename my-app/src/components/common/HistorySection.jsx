@@ -1,9 +1,13 @@
 import { IMAGES } from '@/constant'
 import { PlayCircleOutlined } from '@ant-design/icons'
+import Video from './Video'
+import { useState } from 'react'
 
 const HistorySection = () => {
+    const [showVideo, setShowVideo] = useState(false)
+  
   return (
-    <section className='bg-transparent xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12 relative z-40'>
+    <section className='bg-transparent xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12 relative z-30'>
       <div className='xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4 w-full grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-10 md:gap-12 sm:gap-10 gap-8'>
         <div
           className='xl:space-y-8 lg:space-y-7 md:space-y-8 sm:space-y-7 space-y-6'
@@ -22,7 +26,7 @@ const HistorySection = () => {
             leo nibh. Nullam porta lorem massa, ac porttitor velit ullamcorper a.
           </p>
           <div className='relative z-30 xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 sm:w-12 sm:h-12 w-10 h-10'>
-            <button className='z-30 absolute rounded-full w-full h-full bg-third text-white text-lg'>
+            <button className='z-30 absolute rounded-full w-full h-full bg-third text-white text-lg' onClick={()=>setShowVideo(true)}>
               <PlayCircleOutlined />
             </button>
             <span className='absolute z-10 xl:inset-[8px] lg:inset-[6px] md:inset-[4px] sm:inset-[6px] inset-[4px] bg-primary animate-ping rounded-full'></span>
@@ -45,7 +49,9 @@ const HistorySection = () => {
           </div>
         </div>
       </div>
+      {showVideo && <Video onClose={() => setShowVideo(false)} />}
     </section>
+    
   )
 }
 

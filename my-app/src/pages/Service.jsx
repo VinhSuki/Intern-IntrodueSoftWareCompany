@@ -1,8 +1,6 @@
 import Card from '@/components/common/Card'
-import {
-    CloudSyncOutlined
-} from '@ant-design/icons'
-import ProjectSection from './components/ProjectSection'
+import { CheckCircleFilled, CloudSyncOutlined } from '@ant-design/icons'
+import ProjectSection from '@/components/common/ProjectSection'
 import ReputeSection from '@/components/common/ReputeSection'
 import RateSection from '@/components/common/RateSection'
 import GetInTouch from '@/components/common/GetInTouch'
@@ -78,8 +76,42 @@ const Service = () => {
           </div>
         </div>
       </div>
-      <ProjectSection/>
-      <ReputeSection className='h-auto bg-white relative z-30 xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12' />
+      <ProjectSection />
+      <ReputeSection
+        className='h-auto bg-white relative z-30 xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12'
+        title='Industries we serve'
+        shortContent='Why us ?'
+        description='Morbi lacinia sed diam vel varius. Phasellus non erat in elit mattis ultrices. Aenean nulla libero,
+                vulputate vitae sem quis, dictum aliquam eros. Sed congue metus ac felis scelerisque, ac finibus neque
+                tincidunt.'
+      >
+        <div className='w-full grid grid-cols-2 gap-4'>
+          <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
+            <CheckCircleFilled className='text-primary hover:text-secondary' />
+            <span className='text-text'>Customer Funnel Booster</span>
+          </div>
+          <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
+            <CheckCircleFilled className='text-primary hover:text-secondary' />
+            <span className='text-text'>Vulputate massa</span>
+          </div>
+          <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
+            <CheckCircleFilled className='text-primary hover:text-secondary' />
+            <span className='text-text'>Remarketing Blueprint</span>
+          </div>
+          <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
+            <CheckCircleFilled className='text-primary hover:text-secondary' />
+            <span className='text-text'>Phasellus odio dolor</span>
+          </div>
+          <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
+            <CheckCircleFilled className='text-primary hover:text-secondary' />
+            <span className='text-text'>Lead Nurturing Scheme</span>
+          </div>
+          <div className='space-x-3 xl:text-base lg:text-sm md:text-base sm:text-sm text-xs'>
+            <CheckCircleFilled className='text-primary hover:text-secondary' />
+            <span className='text-text'>Aliquam sed finibus</span>
+          </div>
+        </div>
+      </ReputeSection>
       <RateSection />
       <GetInTouch />
     </div>

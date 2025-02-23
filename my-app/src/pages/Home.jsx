@@ -1,14 +1,17 @@
 import Introduce from '@/components/common/Introduce'
 import { CheckCircleFilled, PlayCircleOutlined } from '@ant-design/icons'
 import { Button, Space } from 'antd'
-import ClientSection from '../../components/common/ClientSection'
-import DesignSection from '../../components/common/DesignSection'
-import GetInTouch from '../../components/common/GetInTouch'
-import RateSection from '../../components/common/RateSection'
-import ReasonSection from './components/ReasonSection'
-import ReputeSection from '../../components/common/ReputeSection'
+import ClientSection from '@/components/common/ClientSection'
+import DesignSection from '@/components/common/DesignSection'
+import GetInTouch from '@/components/common/GetInTouch'
+import RateSection from '@/components/common/RateSection'
+import ReasonSection from '@/components/common/ReasonSection'
+import ReputeSection from '@/components/common/ReputeSection'
+import { useState } from 'react'
+import Video from '@/components/common/Video'
 
 const Home = () => {
+  const [showVideo, setShowVideo] = useState(false)
   return (
     <div>
       <Introduce
@@ -20,7 +23,10 @@ const Home = () => {
       >
         <Space size={30}>
           <div className='relative z-30 xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 sm:w-12 sm:h-12 w-10 h-10'>
-            <button className='z-30 absolute rounded-full w-full h-full bg-third text-white text-lg'>
+            <button
+              className='z-30 absolute rounded-full w-full h-full bg-third text-white text-lg'
+              onClick={() => setShowVideo(true)}
+            >
               <PlayCircleOutlined />
             </button>
             <span className='absolute z-10 xl:inset-[8px] lg:inset-[6px] md:inset-[4px] sm:inset-[6px] inset-[4px] bg-primary animate-ping rounded-full'></span>
@@ -70,6 +76,7 @@ const Home = () => {
       </ReputeSection>
       <RateSection />
       <GetInTouch />
+      {showVideo && <Video onClose={() => setShowVideo(false)} />}
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { Carousel } from 'antd'
 
 const RateSection = () => {
   return (
-    <section className='bg-transparent xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12 relative z-40'>
+    <section className='bg-transparent xl:py-28 lg:py-24 md:py-20 sm:py-16 py-12 relative z-30'>
       <div className='xl:px-48 lg:px-24 md:px-12 sm:px-8 px-4 w-full grid grid-cols-1 lg:grid-cols-2 xl:gap-12 lg:gap-10 md:gap-12 sm:gap-10 gap-8'>
         <div
           className='xl:space-y-8 lg:space-y-7 md:space-y-8 sm:space-y-7 space-y-6'

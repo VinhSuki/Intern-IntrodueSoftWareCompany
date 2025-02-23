@@ -28,7 +28,7 @@ const BusinessSection = ({ className = '' }) => {
           </div>
         </div>
         <div className='grid lg:grid-cols-2 grid-cols-1 lg:gap-4 sm:gap-3 gap-2'>
-          <div>
+          <div data-aos='fade-right'>
             <div className='flex lg:gap-x-6 sm:gap-x-5 gap-x-4 items-center lg:p-4 sm:p-3 p-2 transition-all ease-linear'>
               <MacCommandOutlined className='text-start text-primary  xl:text-4xl lg:text-3xl md:text-4xl sm:text-3xl text-2xl ' />
               <div className='flex-1 items-center lg:space-y-4 sm:space-y-3 space-y-2'>
@@ -82,7 +82,7 @@ const BusinessSection = ({ className = '' }) => {
               </div>
             </div>
           </div>
-          <div className='xl:space-y-6 lg:space-y-5 md:space-y-6 sm:space-y-5 space-y-4'>
+          <div className='xl:space-y-6 lg:space-y-5 md:space-y-6 sm:space-y-5 space-y-4' data-aos='fade-left'>
             <h1 className='text-secondary font-bold xl:text-6xl lg:text-5xl md:text-6xl sm:text-5xl text-4xl'>
               Our project
             </h1>
